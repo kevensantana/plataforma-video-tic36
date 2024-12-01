@@ -1,0 +1,21 @@
+<div class="container-cards">
+  <div class="container-card">
+    <div class="thumbnail">
+      <img [src]="content.thumbnail" [alt]="content.title" />
+    </div>
+    <div class="container-info">
+      <div class="title-card">
+        <strong>{{ content.title }}</strong>
+      </div>
+      <div class="info">
+        <div class="infos-views">
+          <p><strong>{{ formatViews(content.views) }}</strong> de visualizações</p>
+          <p>Publicado em: {{ content.uploadedAt | date: 'MMM/yyyy' }}</p>
+        </div>
+        <div class="acess">
+          <a [routerLink]="['/video', content.id]" class="button-link">Acessar conteúdo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

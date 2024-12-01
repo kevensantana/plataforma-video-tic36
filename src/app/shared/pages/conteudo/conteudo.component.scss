@@ -1,0 +1,107 @@
+/* Estilo para o título principal */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo para o carregamento */
+div[ngIf="loading"] {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-top: 50px;
+}
+
+/* Estilo para a lista de vídeos */
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  justify-items: center;
+}
+
+/* Estilo de cada item de vídeo */
+.video-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-item:hover {
+  transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+
+/* Miniatura do vídeo */
+.video-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Título do vídeo */
+.video-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+/* Descrição do vídeo */
+.video-item p {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0 10px 10px;
+  text-align: center;
+  height: 60px; /* Limita o tamanho da descrição */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Estilo para o link de "Acessar conteúdo" */
+.acess {
+  padding: 10px;
+  text-align: center;
+}
+
+.button-link {
+  background-color: rgb(214, 104, 0); 
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.button-link:hover {
+  background-color: rgb(250, 133, 24); 
+
+  text-decoration: none;
+}
+
+/* Estilo para quando não houver favoritos */
+div[ngIf="!loading && favoritos.length === 0"] {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 50px;
+}
+
+.loading-message {
+  font-size: 22px;
+  color: #666;
+  text-align: center;
+  margin-top: 80px;
+}

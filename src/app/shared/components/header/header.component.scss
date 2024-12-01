@@ -1,0 +1,69 @@
+.container{
+  background-color: rgb(214, 104, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+}
+
+.title{
+  color: rgb(245, 245, 245);
+  font-size: 14px;
+  
+  padding: 0 20px;
+}
+
+.title h1{
+  border-bottom: 10px solid white;
+  width: 100px;
+  left:0;
+  bottom:0
+}
+
+.title strong{
+  border-bottom: 10px solid black;
+  width: 100px;
+  left:0;
+  bottom:0
+}
+
+
+.navBar{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.perfil a{
+  cursor: pointer;
+}
+
+.perfil-image{
+  background-color: #ccc;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  border: #ccc 1px solid;
+}
+
+.perfil-image img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.container-left{
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.login button{
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+

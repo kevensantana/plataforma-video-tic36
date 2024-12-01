@@ -1,0 +1,31 @@
+<div *ngIf="video" class="video-container">
+  <iframe
+    [src]="sanitizedVideoUrl"
+    width="60%"
+    height="500"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+  <div class="col">
+    <div class="container-text">
+      <h1>{{ video.title }}</h1>
+      <p>{{ video.description }}</p>
+      <div class="cop">
+        <div><small>{{ video.uploadedAt | date: 'short' }}</small></div>
+        <strong>|</strong>
+        <div><p>{{ quantidadeCurtidas }} curtidas</p></div>
+      </div>
+    </div>
+    <div class="actions-container">
+      <button class="like-button" (click)="likeVideo()">Curtir</button>
+      <button class="favorite-button" (click)="toggleFavorite()">
+        {{ isFavorite ? 'Remover dos Favoritos' : 'Favoritar' }}
+      </button>
+    </div>    
+    
+  </div>
+</div>
+<div *ngIf="!video" class="loading-message">
+  <p>Carregando o vídeo...</p>
+</div>

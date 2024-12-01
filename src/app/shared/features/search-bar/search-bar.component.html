@@ -1,0 +1,21 @@
+<div class="search-container">
+  <input
+    type="text"
+    placeholder="Pesquise pelo título"
+    [(ngModel)]="searchQuery"
+    (input)="filterContent()"
+    class="search-input"
+  />
+
+  <select [(ngModel)]="selectedType" (change)="filterContent()" class="type-select">
+    <option value="">Todos</option>
+    <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+  </select>
+  
+</div>
+
+<div class="content-list">
+  <div *ngFor="let content of filteredContent" class="content-item">
+    <app-card [content]="content"></app-card>
+  </div>
+</div>

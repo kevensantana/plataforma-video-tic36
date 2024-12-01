@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="title">
+    <h1>Prime<strong>TIC</strong></h1>
+  </div >
+  <div class="navBar">
+    <app-navbar></app-navbar>
+  </div>
+
+
+  <div class="container-left">
+    <div class="perfil">
+      <a routerLink="/profile">
+          <div class="perfil-image">
+            <img [src]="profile?.picture" alt="{{ profile?.name }}">    
+          </div>
+        </a>
+    </div>
+
+    <div class="login">
+      <button *ngIf="(isAuthenticated$ | async); else login" (click)="auth.logout()">Log out</button>
+     <ng-template #login>
+       <button (click)="auth.loginWithRedirect()">Log in</button>
+     </ng-template>
+   </div>
+  </div>
+
+  
+</div>
